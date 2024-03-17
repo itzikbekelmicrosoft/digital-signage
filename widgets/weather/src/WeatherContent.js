@@ -71,6 +71,7 @@ class WeatherContent extends Component {
               background: #358aed;
               flex: 1;
               padding: 16px;
+              direction: rtl;
               font-family: 'Open Sans', sans-serif;
               display: flex;
               flex-direction: row;

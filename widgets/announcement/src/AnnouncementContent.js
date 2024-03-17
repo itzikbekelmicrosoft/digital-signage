@@ -39,7 +39,7 @@ class AnnouncementContent extends Component {
           <div className='icon'>
             <FontAwesomeIcon icon={'exclamation-triangle'} size={'0.4x'} color={accentColor} />
           </div>
-          <span>Announcement</span>
+          <span>הודעות מועד הבית</span>
         </div>
         <AutoScroll style={{ display: 'block' }}>
           <div className='text'>
@@ -84,13 +84,14 @@ class AnnouncementContent extends Component {
             }
             .announce .title {
               color: ${titleTextColor};
+              direction: rtl;
               font-family: 'Open Sans', sans-serif;
-              font-size: 16px;
+              font-size: 18px;
               font-weight: 600;
-              text-align: left;
+              text-align: right;
               padding: 4px;
               z-index: 1;
-              border-left: 4px solid ${accentColor};
+              border-right: 4px solid ${accentColor};
               display: flex;
               flex-direction: row;
               align-items: center;

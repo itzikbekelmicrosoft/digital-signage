@@ -65,6 +65,8 @@ class ListContent extends Component {
               font-size: 16px;
               padding-left: 12px;
               font-weight: 600;
+              text-align: right; /* Keep this if you want to ensure right-to-left text */
+              direction: rtl; /* Add this to explicitly set right-to-left direction */
               text-transform: uppercase;
               z-index: 1;
             }
@@ -78,6 +80,8 @@ class ListContent extends Component {
             }
             .element {
               display: flex;
+              text-align: right; /* Keep this if you want to ensure right-to-left text */
+              direction: rtl; /* Add this to explicitly set right-to-left direction */
               flex-direction: row;
               justify-content: space-between;
               align-items: center;
