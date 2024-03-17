@@ -68,6 +68,7 @@ class ImageContent extends Component {
               border-left: 3px solid rgba(255, 255, 255, 0.5);
               font-size: 16px;
               padding-left: 12px;
+              direction: rtl;
               font-weight: 600;
               text-transform: uppercase;
               z-index: 1;

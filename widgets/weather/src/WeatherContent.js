@@ -29,7 +29,7 @@ class WeatherContent extends Component {
   componentDidMount() {
     const { data: { unit = DEFAULT_UNIT, zip = DEFAULT_ZIP } = {} } = this.props
     axios
-      .get(`${API_URL}/weather?zip=${zip},us&apiKey=${API_KEY}&units=${unit}`)
+      .get(`${API_URL}/weather?lat=31.9642&lon=34.8044&apiKey=${API_KEY}&units=${unit}&lang=he`)
       .then(({ data }) => {
         const {
           name,

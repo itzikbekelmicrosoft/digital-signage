@@ -2,38 +2,42 @@
  * @fileoverview DisplayFrame component which renders the date, time and layout
  * for the added widgets
  */
-
-import React from 'react'
-import Clock from 'react-live-clock'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWifi } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWifi } from '@fortawesome/free-solid-svg-icons';
+import moment from 'moment';
+import 'moment/locale/he'; // Import Hebrew locale for moment.js
 
 class Frame extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const { children, statusBar = [] } = this.props
+    const { children, statusBar = [] } = this.props;
     return (
-      <div className='display'>
+      <div className="display">
         {statusBar && statusBar.length > 0 && (
           <div className={'status'}>
-            {statusBar.map(item => {
-              const type = item.split('_')[0]
+            {statusBar.map((item) => {
+              const type = item.split('_')[0];
               return (
                 <div className={type}>
-                  {type == 'date' ? (
-                    <Clock ticking={true} format={'dddd, MMMM Do.'} />
-                  ) : type == 'connection' ? (
+                  {type === 'date' ? (
+                    <span>
+                      {moment().format('dddd')} {moment().format('DD')}{' '}
+                      {moment().format('MMMM')}{' '}
+                      {moment().format('YYYY')} {/* Format date in Hebrew */}
+                    </span>
+                  ) : type === 'connection' ? (
                     <FontAwesomeIcon className={'wifi'} icon={faWifi} />
-                  ) : type == 'time' ? (
-                    <Clock ticking={true} format={'H:mm'} />
+                  ) : type === 'time' ? (
+                    <span>{moment().format('LT')}</span> // Format time in Hebrew
                   ) : (
                     ' '
                   )}
                 </div>
-              )
+              );
             })}
           </div>
         )}
@@ -70,8 +74,8 @@ class Frame extends React.Component {
           `}
         </style>
       </div>
-    )
+    );
   }
 }
 
-export default Frame
+export default Frame;

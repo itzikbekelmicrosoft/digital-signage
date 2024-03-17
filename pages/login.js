@@ -91,7 +91,7 @@ class Login extends Component {
             )}
             <div className={'alert-info'}>
               <span className={'alert-text'}>
-                Use the username "demo" and password "demo"
+                Welcome please login with your credentials
               </span>
             </div>
             <label for='username'>Username</label>

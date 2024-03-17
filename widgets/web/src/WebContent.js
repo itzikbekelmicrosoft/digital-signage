@@ -9,7 +9,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 
 config.autoAddCss = false
 
-const DEFAULT_COLOR = '#34495e'
+const DEFAULT_COLOR = '#c8e0e6'
 const DEFAULT_URL = 'https://compsci.lafayette.edu/'
 
 class WebContent extends Component {
@@ -62,6 +62,7 @@ class WebContent extends Component {
               border-left: 3px solid rgba(255, 255, 255, 0.5);
               font-size: 16px;
               padding-left: 12px;
+              direction: rtl;
               font-weight: 600;
               text-transform: uppercase;
               z-index: 1;
