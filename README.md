@@ -161,3 +161,12 @@ module.exports = ['slideshow', 'weather', 'congrats', 'youtube', 'web',
 ```
 
 5. Restart the server to see the new widget appear on the administrator panel
+
+Deployment:
+
+1. run "npm install" in digital-signage root folder. 
+2. cd to igital-signage/mongoose-crudify and run "npm link"
+3. run "npm link mongoose-crudify" in digital-signage root folder.
+4. build docker with: "docker buildx build --platform linux/amd64 -t helhimush20acr.azurecr.io/helhimush20/tv-project:latest ."
+5. push docker image to azure with: "docker push helhimush20acr.azurecr.io/helhimush20/tv-project:latest"
+6. make sure web app is running and pointing to the right image in azure portal.
